@@ -1,6 +1,6 @@
 # 分布式开发系统
 
-<div style="">
+<div>
     <img src="introduce/distribute.jpg">
 </div>
 
