@@ -1,5 +1,9 @@
 # 分布式开发系统
 
+<div style="">
+    <img src="introduce/distribute.jpg">
+</div>
+
 ## 整合MongoDB
     Mongodb是一款很流行文档型数据库
 
