@@ -1,0 +1,50 @@
+spring:
+  # 配置数据源
+  datasource:
+    # 连接MySQL数据库
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_distribute?useUnicode=false&characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+  # 配置JPA
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          # 生成规则
+          auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    # 显示SQL数据
+    show-sql: true
+    # 生成表名按照自己的命名
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  # 配置Redis数据库
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password:
+    pool:
+      #连接池最大连接数(使用负值标示没有限制)
+      max-active: 8
+      #连接池最大阻塞等待时间(使用负值标示没有限制)
+      max-wait: -1
+      #连接池中的最大空闲连接
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+  # 配置MongoDB数据库
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/db_distribute
+      #database: db_distribute
+      #host: 127.0.0.1
+      #port: 27017
+      #username: develop
+      #password:
+      #repositories:
+        #enabled: true
+      #authentication-database: db_distribute
+      #uri: mongodb://user:secret@localhost:12345
